@@ -1,7 +1,6 @@
 aiko = false
 
 loop do
-
     your_win = false
 
     if aiko
@@ -11,7 +10,6 @@ loop do
     end
 
     puts "0(グー)1(チョキ)2(パー)3(戦わない)"
-
     input_hand_n = gets.to_i
     comp_hand_n = rand(3)
 
@@ -26,7 +24,6 @@ loop do
             else
                 puts "ホイ!"
             end
-            puts "---------------------"
 
             def jyanken_num(hand_n)
                 case hand_n
@@ -42,7 +39,7 @@ loop do
             input_hand = jyanken_num(input_hand_n)
             comp_hand = jyanken_num(comp_hand_n)
 
-
+            puts "---------------------"
             puts "あなた：#{input_hand}を出しました"
             puts "相手：#{comp_hand}を出しました"
             puts "---------------------"
@@ -56,7 +53,6 @@ loop do
                 your_win = true
             end
         end
-
         #あっち向いてホイ
         puts "あっち向いて〜"
         puts "0(上)1(下)2(左)3(右)"
@@ -65,7 +61,6 @@ loop do
         comp_dir_n = rand(3)
 
         if (0..3).include?(input_dir_n)
-
             def direction(dir_num)
                 case dir_num
                 when 0
@@ -95,7 +90,6 @@ loop do
                     puts "あなたの負けです"
                     break
                 end
-                #勝ち負け決まらなかったから最初に戻る
             end
         else
             puts "0~3の数字を入力してください"
